@@ -1,3 +1,6 @@
 body {
-    background-color: brown;
+    background-color: darkslategrey;
+}
+.bg-black {
+    background: black;
 }
