@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}{% block content %}{% load static %}
 <header class="row" id="header">
     <div class="col-md-4">
-        <center><img src="{% static "portfolio/foto_portafolio.jfif" %}" alt="" width="250" heigh="250" ></center>
+        <center><img src="{% static "portfolio/foto_portafolio.jfif" %}" alt="" width="250" heigh="250" id="foto"></center>
     </div>
     <div class="col-md-8 my-auto">
         <h4>I am <strong>Evander Ramírez</strong></h4>
@@ -14,11 +14,11 @@
     <p>In order to show my technical skills, I will show you my projects and the technologies I use to create them.</p>
     {% for project in projects %}
         <div class="col-md-4">
-           <div class="card bg-black">
+           <div class="card bg-black card_project">
                 <div class="card-body">
                     <h1>{{project.title}}</h1>
                     <p>{{project.description}}</p>
-                    <img src="{{project.image.url}}" alt="{{project.title}}" width="380" heigh="190"> <br>
+                    <img src="{{project.image.url}}" alt="{{project.title}}" width="400" heigh="200" class="card-img"> <br>
                     {% if project.url %}
                     <a href="{{project.url}}">{{project.url}}</a>
                     {% endif %}

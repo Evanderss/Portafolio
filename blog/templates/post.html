@@ -2,10 +2,15 @@
 {% block content %}
     <h1>Posts</h1>
     {% for post in posts %}
-        <h2>{{post.title}}</h2>
-        <p>{{post.description|truncatechars:100}}</p>
-        <p>{{post.date|date:"M d Y"|upper }}</p>
-        <img src="{{post.image.url}}" alt="{{post.title}}">
-        <a href="{% url 'blog:post_detail' post.id %}">{{post.title}}</a>
+        <div class="card card-body">
+            <div class="row">
+                <img src="{{post.image.url}}" alt="{{post.title}}">
+            </div>
+            <h2>{{post.title}}</h2>
+            <p>{{post.description|truncatechars:100}}</p>
+            <p>{{post.date|date:"M d Y"|upper }}</p>
+            
+            <a href="{% url 'blog:post_detail' post.id %}">{{post.title}}</a>
+        </div>
     {% endfor %}
 {% endblock content %}

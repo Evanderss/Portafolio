@@ -1,6 +1,13 @@
 body {
-    background-color: cornflowerblue;
+    background-color:midnightblue;
 }
 #header {
-    background-color:darkslategrey; 
+    border: 5px solid black;
+}
+#foto {
+    border-radius: 0 60px 0 60px;
+}
+.card_project {
+    border: 1px solid white;
+    cursor: pointer;
 }
