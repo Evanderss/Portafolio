@@ -1,6 +1,6 @@
 body {
-    background-color: darkslategrey;
+    background-color: cornflowerblue;
 }
-.bg-black {
-    background: black;
+#header {
+    background-color:darkslategrey; 
 }
